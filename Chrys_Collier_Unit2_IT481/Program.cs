@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Chrys_Collier_Unit2_IT481
+namespace Chrys_Collier_IT481
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace Chrys_Collier_Unit2_IT481
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Unit2());
+            Application.Run(new LoginPage());
         }
     }
 }
