@@ -26,10 +26,14 @@ namespace Chrys_Collier_IT481
                 lblError.Refresh();
                 lblError.Visible = true;
             }
+            else if (txtPassword.Text.Length < 8) {
+                lblError.Text = "Password length must be 8 characters or more.";
+                lblError.Refresh();
+                lblError.Visible = true;
+            }
             else
             {
                 lblError.Visible = false;
-                // CheckLoginCredentials(txtServer.Text, txtDatabase.Text, txtUser.Text, txtPassword.Text);
                 AuthorizedPage authorized = new AuthorizedPage(txtServer.Text, txtDatabase.Text, txtUser.Text, txtPassword.Text);
                 authorized.FormClosed += new FormClosedEventHandler(authorizedPage_FormClosed);
                 this.Hide();
@@ -39,15 +43,6 @@ namespace Chrys_Collier_IT481
         void authorizedPage_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
-        }
-        private bool CheckLoginCredentials(string server, string database, string user, string pass)
-        {
-            SqlConnection c;
-            c = CreateConnection(server,database,user,pass);
-            using (c)
-            {
-                return true;
-            }
         }
         private SqlConnection CreateConnection(string server, string database, string user, string pass)
         {

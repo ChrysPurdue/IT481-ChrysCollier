@@ -108,7 +108,6 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(161, 20);
             this.txtUser.TabIndex = 7;
-            this.txtUser.Text = "User_";
             // 
             // txtPassword
             // 
@@ -116,7 +115,6 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(161, 20);
             this.txtPassword.TabIndex = 8;
-            this.txtPassword.Text = "password";
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // lblError
